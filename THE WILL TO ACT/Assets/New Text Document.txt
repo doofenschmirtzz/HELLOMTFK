@@ -1,0 +1,1 @@
+Data Source=ADMIN\CU;Initial Catalog=QLNV;User ID=sa;Password=cac
