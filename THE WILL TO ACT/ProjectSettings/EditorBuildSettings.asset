@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Hoang/Scenes/Main Menu.unity
+    guid: b5e9055cd87a0a344ab235fccc3b11f2
+  - enabled: 1
+    path: Assets/_Hoang/Scenes/1st Floor.unity
+    guid: 8503282843152b24eb1a684756fd2472
+  - enabled: 1
+    path: Assets/_Hoang/Scenes/Ground.unity
+    guid: 9479e396e51e1f34f871382b4eb39feb
+  - enabled: 1
+    path: Assets/_Hung/Scenes/Map 2.unity
+    guid: 3d7fc470bd160e24f95da3ce82ab065b
   m_configObjects: {}
