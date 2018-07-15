@@ -297,7 +297,11 @@ public class PlayerManager : MonoBehaviour {
 				totalKeyFound += 1;
 				playSfx(eatKeySfx[Random.Range(0, 2)]);
 				break;
-		}
+            case "money":
+                print("Found a Money");
+                Destroy(other.gameObject);
+                break;
+        }
 	}
 
 	void OnTriggerExit ( Collider other  ){

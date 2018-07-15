@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - fadePlane
+  - 4
+  - 1
+  - 2
+  - 3
+  - key
+  - staticLaser
+  - _trap
+  - police
+  - money
   layers:
   - Default
   - TransparentFX

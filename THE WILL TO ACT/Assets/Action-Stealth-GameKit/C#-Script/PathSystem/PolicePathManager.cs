@@ -41,11 +41,10 @@ public class PolicePathManager : MonoBehaviour {
 		
 		//if this object should start with a delay, then apply it
 		if(startDelay > 0)
-			StartCoroutine(activate());
+		StartCoroutine(activate());
 		else
 			activeToMove = true;
 	}
-
 	IEnumerator activate (){
 		yield return new WaitForSeconds(startDelay);
 		activeToMove = true;
