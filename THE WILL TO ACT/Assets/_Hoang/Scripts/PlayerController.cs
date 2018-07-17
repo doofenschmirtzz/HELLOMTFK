@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour {
     private Button pauseButton;
 
     [SerializeField]
-    private GameObject loadingPanel, finishPanel;
+    private GameObject loadingPanel, finishPanel, gameOverPanel, backgroundSfx;
 
     private AudioSource audioSource;
-    public AudioClip alertSfx;
+    public AudioClip alertSfx, finishSfx, getItemSfx;
     public bool alreadyPlayed = false;
     
 
@@ -36,31 +36,43 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter(Collider target)
     {
-        if (target.tag == "trap" & alreadyPlayed == false)
+        if (target.tag == "trap" && alreadyPlayed == false)
         {
             //AudioSource.PlayClipAtPoint(runNowSfx, target.transform.position);
+            Time.timeScale = 0;
+            Destroy(backgroundSfx);
+            gameOverPanel.SetActive(true);
 
             audioSource.PlayOneShot(alertSfx);
             alreadyPlayed = true;
         }
 
-        if (target.tag == "to1stFloor")
-        {
-            //loadingPanel.SetActive(true);
-            SceneManager.LoadScene("1st Floor");
-        }
+        //if (target.tag == "to1stFloor")
+        //{
+        //    //loadingPanel.SetActive(true);
+        //    SceneManager.LoadScene("1st Floor");
+        //}
 
         if (target.tag == "toGround")
         {
-            //loadingPanel.SetActive(true);
+            loadingPanel.SetActive(true);
             SceneManager.LoadScene("Ground");
         }
 
         if (target.tag == "exit")
         {
             Time.timeScale = 0;
+            audioSource.PlayOneShot(finishSfx);
+            Destroy(backgroundSfx);
+
             finishPanel.SetActive(true);
             pauseButton.gameObject.SetActive(false);
+        }
+
+        if (target.tag == "_Item")
+        {
+            Destroy(target.gameObject);
+            audioSource.PlayOneShot(getItemSfx);
         }
     }
 }

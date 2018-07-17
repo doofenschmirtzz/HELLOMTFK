@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{8DE33075-BCB6-DD34-55D5-5FCCA0561A17}</ProjectGuid>
+    <ProjectGuid>{BA921599-84E6-C180-8CEB-71A13BAF8889}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -108,10 +108,10 @@
     <None Include="Assets\POLYGON_Renderbox\Shaders\UnlitVertexColour_Alpha.shader" />
     <None Include="Assets\_Hoang\_Source\4_Ornamental Flower Set\Shaders\Transparent-BumpSpecNoCull.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>F:/[Nam 3]/[Đồ Án Cơ Sở]/HELLOMTFK/THE WILL TO ACT/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Unity/[Project]/Do An Co So/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>F:/[Nam 3]/[Đồ Án Cơ Sở]/HELLOMTFK/THE WILL TO ACT/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Unity/[Project]/Do An Co So/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -286,9 +286,6 @@
     </Reference>
     <Reference Include="Unity.Locator">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>F:/[Nam 3]/[Đồ Án Cơ Sở]/HELLOMTFK/THE WILL TO ACT/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

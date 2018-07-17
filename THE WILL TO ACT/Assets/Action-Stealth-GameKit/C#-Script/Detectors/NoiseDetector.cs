@@ -22,7 +22,7 @@ public class NoiseDetector : MonoBehaviour {
 	///*************************************************************************///
 	void Start (){
 		minSize = 0.9f;
-		maxSize = 5.0f;
+		maxSize = 8.0f;
 		isDetectingFlag = false;
 		transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
 		nextTime = detectionRate;

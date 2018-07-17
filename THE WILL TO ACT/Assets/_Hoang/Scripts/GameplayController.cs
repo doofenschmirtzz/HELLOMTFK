@@ -10,7 +10,7 @@ public class GameplayController : MonoBehaviour {
     private Button pauseButton, backButton, toMainmenuButton, restartButton;
 
     [SerializeField]
-    private GameObject pausePanel, loadingPanel, gameOverPanel, finishPanel;
+    private GameObject pausePanel, loadingPanel, gameOverPanel, finishPanel, player;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +19,18 @@ public class GameplayController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            pausePanel.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Camera.main.transform.position = player.transform.position;
+        }
+
+    }
 
     public void _PauseButton()
     {
@@ -38,6 +48,7 @@ public class GameplayController : MonoBehaviour {
 
     public void _ToMainmenuButton()
     {
+        pauseButton.gameObject.SetActive(false);
         pausePanel.SetActive(false);
         gameOverPanel.SetActive(false);
         finishPanel.SetActive(false);
@@ -47,7 +58,10 @@ public class GameplayController : MonoBehaviour {
 
     public void _RestartButton()
     {
-        gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("Map 2");
+        pauseButton.gameObject.SetActive(false);
+        gameOverPanel.SetActive(false);        
+        //SceneManager.LoadScene("Map 2");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }

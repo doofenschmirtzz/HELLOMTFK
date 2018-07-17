@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class TrapController : MonoBehaviour {
 
     [SerializeField]
-    public Button pauseButton;
+    private Button pauseButton;
 
     [SerializeField]
-    public GameObject gameOverPanel;
+    private GameObject loadingPanel, finishPanel, gameOverPanel, backgroundSfx;
 
     private AudioSource audioSource;
-    public AudioClip alertSfx;
+    public AudioClip alertSfx, finishSfx, getItemSfx;
 
     // Use this for initialization
     void Start () {
@@ -26,22 +26,30 @@ public class TrapController : MonoBehaviour {
 
     void OnTriggerEnter(Collider target)
     {
-        if (target.tag == "_trap")
+        if (target.tag == "trap")
         {
             //AudioSource.PlayClipAtPoint(runNowSfx, target.transform.position);
             Time.timeScale = 0;
-
-            pauseButton.gameObject.SetActive(false);
-            audioSource.PlayOneShot(alertSfx);
+            Destroy(backgroundSfx);
             gameOverPanel.SetActive(true);
-            
-        }       
 
-        //if (target.tag == "exit")
-        //{
-        //    Time.timeScale = 0;
-        //    finishPanel.SetActive(true);
-        //    pauseButton.gameObject.SetActive(false);
-        //}
+            audioSource.PlayOneShot(alertSfx);
+        }
+
+        if (target.tag == "exit")
+        {
+            Time.timeScale = 0;
+            audioSource.PlayOneShot(finishSfx);
+            Destroy(backgroundSfx);
+
+            finishPanel.SetActive(true);
+            pauseButton.gameObject.SetActive(false);
+        }
+
+        if (target.tag == "_Item")
+        {
+            Destroy(target.gameObject);
+            audioSource.PlayOneShot(getItemSfx);
+        }
     }
 }

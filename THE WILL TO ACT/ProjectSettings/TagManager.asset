@@ -4,23 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - fadePlane
-  - 4
-  - 1
-  - 2
-  - 3
-  - key
-  - staticLaser
-  - _trap
-  - police
-  - money
-  - toGround
-  - circleDetector
-  - wall
-  - exitdoor
-  - box
-  - exit
   - _Item
+  - key
+  - exit
+  - circleDetector
+  - _trap
+  - trap
   layers:
   - Default
   - TransparentFX

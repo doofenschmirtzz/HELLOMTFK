@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour {
 
     [SerializeField]
-    private Button newGameButton, creditsButton, exitButton, yesButton, noButton;
+    private Button newGameButton, instructionButton, creditsButton, exitButton, yesButton, noButton;
 
     [SerializeField]
-    private GameObject newGamePanel, creditsPanel, loadingPanel, confirmExitPanel;
+    private GameObject newGamePanel, instructionPanel, creditsPanel, loadingPanel, confirmExitPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -22,12 +22,14 @@ public class MainMenuController : MonoBehaviour {
 		
 	}
 
+    //New Game Button
     public void _NewGameButton()
     {
 
         newGamePanel.SetActive(true);
     }
 
+    //Back Button
     public void _BackButton()
     {
         if(newGamePanel == true)
@@ -39,8 +41,20 @@ public class MainMenuController : MonoBehaviour {
         {
             creditsPanel.SetActive(false);
         }
+
+        if (instructionPanel == true)
+        {
+            instructionPanel.SetActive(false);
+        }
     }
 
+    //Instruction Button
+    public void _InstructionButton()
+    {
+        instructionPanel.SetActive(true);
+    }
+
+    //Credits Button
     public void _CreditsButton()
     {
         creditsPanel.SetActive(true);
