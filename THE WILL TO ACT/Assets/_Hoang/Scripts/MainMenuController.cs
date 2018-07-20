@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour {
 
     [SerializeField]
-    private Button newGameButton, instructionButton, creditsButton, exitButton, yesButton, noButton;
+    private Button newGameButton, instructionButton, howToPlayButton, creditsButton, exitButton, yesButton, noButton;
 
     [SerializeField]
-    private GameObject newGamePanel, instructionPanel, creditsPanel, loadingPanel, confirmExitPanel;
+    private GameObject newGamePanel, howToPlayPanel, creditsPanel, loadingPanel, confirmExitPanel,
+                        instructionPanel1, instructionPanel2, instructionPanel3;
 
 	// Use this for initialization
 	void Start () {
@@ -42,16 +43,22 @@ public class MainMenuController : MonoBehaviour {
             creditsPanel.SetActive(false);
         }
 
-        if (instructionPanel == true)
+        if (howToPlayPanel == true)
         {
-            instructionPanel.SetActive(false);
+            howToPlayPanel.SetActive(false);
         }
     }
 
     //Instruction Button
     public void _InstructionButton()
     {
-        instructionPanel.SetActive(true);
+        instructionPanel1.SetActive(true);
+    }
+
+    //How To Play Button
+    public void _HowToPlayButton()
+    {
+        howToPlayPanel.SetActive(true);
     }
 
     //Credits Button
@@ -89,5 +96,31 @@ public class MainMenuController : MonoBehaviour {
     {
         loadingPanel.SetActive(true);
         SceneManager.LoadScene("Map 2");
+    }
+
+    //Instruction Panel
+    public void _NextTo2Button()
+    {
+
+    }
+
+    public void _NextTo3Button()
+    {
+
+    }
+
+    public void _PrevTo1Button()
+    {
+
+    }
+
+    public void _PrevTo2Button()
+    {
+
+    }
+
+    public void _GotItButton()
+    {
+
     }
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Hung/Scenes/Map 2.unity
+- path: Assets/_Hoang/Scenes/Main Menu.unity
   isLoaded: 1
   isActive: 1
