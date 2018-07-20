@@ -26,7 +26,7 @@ public class MainMenuController : MonoBehaviour {
     //New Game Button
     public void _NewGameButton()
     {
-
+        exitButton.gameObject.SetActive(false);
         newGamePanel.SetActive(true);
     }
 
@@ -36,6 +36,7 @@ public class MainMenuController : MonoBehaviour {
         if(newGamePanel == true)
         {
             newGamePanel.SetActive(false);
+            exitButton.gameObject.SetActive(true);
         }
         
         if(creditsPanel == true)
@@ -70,6 +71,13 @@ public class MainMenuController : MonoBehaviour {
     public void _ExitButton()
     {
         confirmExitPanel.SetActive(true);
+
+        //Disable Buttons
+        newGameButton.interactable = false;
+        instructionButton.interactable = false;
+        howToPlayButton.interactable = false;
+        creditsButton.interactable = false;
+        exitButton.interactable = false;
     }
 
     ///Confirm Exit Panel
@@ -81,6 +89,13 @@ public class MainMenuController : MonoBehaviour {
     public void _NoButton()
     {
         confirmExitPanel.SetActive(false);
+
+        //Enable Buttons
+        newGameButton.interactable = true;
+        instructionButton.interactable = true;
+        howToPlayButton.interactable = true;
+        creditsButton.interactable = true;
+        exitButton.interactable = true;
     }
 
     ///End Confirm Exit Panel
@@ -101,26 +116,30 @@ public class MainMenuController : MonoBehaviour {
     //Instruction Panel
     public void _NextTo2Button()
     {
-
+        instructionPanel1.SetActive(false);
+        instructionPanel2.SetActive(true);
     }
 
     public void _NextTo3Button()
     {
-
+        instructionPanel2.SetActive(false);
+        instructionPanel3.SetActive(true);
     }
 
     public void _PrevTo1Button()
     {
-
+        instructionPanel2.SetActive(false);
+        instructionPanel1.SetActive(true);
     }
 
     public void _PrevTo2Button()
     {
-
+        instructionPanel3.SetActive(false);
+        instructionPanel2.SetActive(true);
     }
 
     public void _GotItButton()
     {
-
+        instructionPanel3.SetActive(false);
     }
 }
