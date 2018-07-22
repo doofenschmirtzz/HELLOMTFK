@@ -113,6 +113,12 @@ public class MainMenuController : MonoBehaviour {
         SceneManager.LoadScene("Map 2");
     }
 
+    public void _Map3Button()
+    {
+        loadingPanel.SetActive(true);
+        SceneManager.LoadScene("Demo");
+    }
+
     //Instruction Panel
     public void _NextTo2Button()
     {

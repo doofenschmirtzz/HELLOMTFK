@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Hung/Scenes/Map 2.unity
     guid: 3d7fc470bd160e24f95da3ce82ab065b
+  - enabled: 1
+    path: Assets/_Hung/Scenes/Demo.unity
+    guid: d84f52851f20b8e4ebc02d470115bc01
   m_configObjects: {}
