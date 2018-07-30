@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Hoang/Scenes/1st Floor.unity
+- path: Assets/_Hung/Scenes/Demo.unity
   isLoaded: 1
   isActive: 1
